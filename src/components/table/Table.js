@@ -77,21 +77,23 @@ const List = () => {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
-              <TableCell>
-                {row.id}
-              </TableCell>
+              <TableCell className="tableCell">{row.id}</TableCell>
               <TableCell className="tableCell">{row.product}</TableCell>
               <TableCell className="tableCell">
-<div className="cellWrapper">
-    <img src={row.img} alt="" className="image" />
-    {row.product}
-</div>
-
+                <div className="cellWrapper">
+                  <img src={row.img} alt="" className="image" />
+                  {row.product}
+                </div>
               </TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
               <TableCell className="tableCell">{row.amount}</TableCell>
               <TableCell className="tableCell">{row.method}</TableCell>
-              <TableCell className="tableCell"> <span className={"status " + row.status}>{row.status}</span> </TableCell>
+              <TableCell className="tableCell">
+                {" "}
+                <span className={"status " + row.status}>
+                  {row.status}
+                </span>{" "}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

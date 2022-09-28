@@ -1,12 +1,14 @@
-import React from 'react'
-import './home.scss'
+import React from "react";
+import Sidebar from "../../components/sidebar/Sidebar";
+import "./home.scss";
 
 const Home = () => {
   return (
-    <div className='home'>
-    <h1 className='title'>SAM.</h1>
+    <div className="home">
+      <Sidebar />
+      <div className="homeContainer">Container</div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
